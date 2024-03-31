@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleATMSoftware", "SimpleATMSoftware\SimpleATMSoftware.csproj", "{D32BCA5E-323C-4CE9-B681-5182FC61B66C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleATMSoftware.Admin", "SimpleATMSoftware.Admin\SimpleATMSoftware.Admin.csproj", "{73A57E14-1E2A-4658-8B0F-514A47E94EFB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D32BCA5E-323C-4CE9-B681-5182FC61B66C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D32BCA5E-323C-4CE9-B681-5182FC61B66C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D32BCA5E-323C-4CE9-B681-5182FC61B66C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D32BCA5E-323C-4CE9-B681-5182FC61B66C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73A57E14-1E2A-4658-8B0F-514A47E94EFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73A57E14-1E2A-4658-8B0F-514A47E94EFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73A57E14-1E2A-4658-8B0F-514A47E94EFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73A57E14-1E2A-4658-8B0F-514A47E94EFB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0ECD39CF-1087-476E-BD41-7C162CE1EE8A}
+	EndGlobalSection
+EndGlobal
