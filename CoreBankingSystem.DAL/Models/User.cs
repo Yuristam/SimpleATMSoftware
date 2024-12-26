@@ -1,5 +1,8 @@
 ﻿namespace CoreBankingSystem.DAL.Models
 {
+    /// <summary>
+    /// User Model
+    /// </summary>
     public class User
     {
         /// <summary>
@@ -40,11 +43,6 @@
         }
 
         /// <summary>
-        /// User Account
-        /// </summary>
-        public ICollection<Account> Accounts { get; set; } = new List<Account>();
-
-        /// <summary>
         /// User Login (6-digit number)
         /// </summary>
         public int Login { get; set; }
@@ -58,5 +56,20 @@
         /// User Password
         /// </summary>
         public string Password { get; set; }
+
+        /// <summary>
+        /// User Account
+        /// </summary>
+        public ICollection<Account> Accounts { get; set; } = new List<Account>();
+        
+        /// <summary>
+        /// Deposits
+        /// </summary>
+        public ICollection<Deposit> Deposits { get; set; } = new List<Deposit>();
+        
+        /// <summary>
+        /// Loans
+        /// </summary>
+        public ICollection<Loan> Loans { get; set; } = new List<Loan>();
     }
 }

@@ -12,5 +12,8 @@ namespace CoreBankingSystem.DAL.Models
         public ICollection<Transaction> Transactions { get; set; } = new List<Transaction>();
         public byte TransactionsLimitPerDay { get; set; }
         public bool IsAccountBlocked { get; set; }
+
+        public int UserId { get; set; }
+        public User User { get; set; }
     }
 }

@@ -7,5 +7,8 @@
         public decimal Sum { get; set; }
         public int SenderAccount { get; set; }
         public int ReceiverAccount { get; set; }
+
+        public long AccountNumber { get; set; }
+        public Account Account { get; set; }
     }
 }

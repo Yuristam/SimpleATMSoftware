@@ -1,19 +1,56 @@
 ﻿namespace CoreBankingSystem.DAL.Models
 {
+    /// <summary>
+    /// Loan
+    /// </summary>
     public class Loan
     {
-        public double LoanAmount { get; set; } // Сумма кредита
-        public double InterestRate { get; set; } // Процентная ставка
-        public int LoanTermMonths { get; set; } // Срок кредита в месяцах
+        /// <summary>
+        /// Сумма кредита
+        /// </summary>
+        public double LoanAmount { get; set; } 
 
-        public Loan(double loanAmount, double interestRate, int loanTermMonths)
+        /// <summary>
+        /// Процентная ставка
+        /// </summary>
+        public double InterestRate { get; set; } 
+
+        /// <summary>
+        /// Срок кредита в месяцах
+        /// </summary>
+        public int LoanTermMonths { get; set; }
+
+        /// <summary>
+        /// User Id
+        /// </summary>
+        public int UserId { get; set; }
+
+        /// <summary>
+        /// User Model
+        /// </summary>
+        public User User { get; set; }
+
+        /// <summary>
+        /// Конструктор для инициализации данных кредита
+        /// </summary>
+        /// <param name="loanAmount"></param>
+        /// <param name="interestRate"></param>
+        /// <param name="loanTermMonths"></param>
+        /// <param name="userId">User ID</param>
+        /// <param name="user">User</param>
+        public Loan(double loanAmount, double interestRate, int loanTermMonths, int userId, User user)
         {
             LoanAmount = loanAmount;
             InterestRate = interestRate;
             LoanTermMonths = loanTermMonths;
+            UserId = userId;
+            User = user;
         }
 
-        // Метод для вычисления ежемесячного платежа по кредиту
+        /// <summary>
+        /// Метод для вычисления ежемесячного платежа по кредиту
+        /// </summary>
+        /// <returns>Ежемесячная выплата</returns>
         public double CalculateMonthlyPayment()
         {
             double monthlyInterestRate = InterestRate / 100 / 12;
@@ -23,13 +60,18 @@
             return monthlyPayment;
         }
 
-        // Метод для вычисления общей суммы выплат по кредиту
+        /// <summary>
+        /// Метод для вычисления общей суммы выплат по кредиту
+        /// </summary>
+        /// <returns>Общая сумма выплаты</returns>
         public double CalculateTotalRepayment()
         {
             return CalculateMonthlyPayment() * LoanTermMonths;
         }
 
-        // Метод для вывода информации о кредите
+        /// <summary>
+        /// Метод для вывода информации о кредите
+        /// </summary>
         public void DisplayLoanDetails()
         {
             Console.WriteLine($"Loan Amount: {LoanAmount:C}");
