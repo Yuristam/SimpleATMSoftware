@@ -2,7 +2,7 @@
 {
     public class Client
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         public string Name { get; set; } = string.Empty;
         public int Login { get; set; }
         public string Password { get; set; } = string.Empty;

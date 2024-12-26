@@ -2,11 +2,12 @@
 {
     public class Deposit
     {
+        public int Id { get; set; }
         public double DepositAmount { get; set; }
         public double InterestRate { get; set; }
         public int DepositTermMonths { get; set; }
 
-        public int ClientId { get; set; }
+        public Guid ClientId { get; set; }
         public Client Client { get; set; }
 
         /// <summary>
