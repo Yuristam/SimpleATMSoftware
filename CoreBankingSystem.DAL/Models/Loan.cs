@@ -1,51 +1,12 @@
 ﻿namespace CoreBankingSystem.DAL.Models
 {
-    /// <summary>
-    /// Loan
-    /// </summary>
     public class Loan
     {
-        /// <summary>
-        /// Сумма кредита
-        /// </summary>
         public double LoanAmount { get; set; } 
-
-        /// <summary>
-        /// Процентная ставка
-        /// </summary>
         public double InterestRate { get; set; } 
-
-        /// <summary>
-        /// Срок кредита в месяцах
-        /// </summary>
         public int LoanTermMonths { get; set; }
-
-        /// <summary>
-        /// User Id
-        /// </summary>
-        public int UserId { get; set; }
-
-        /// <summary>
-        /// User Model
-        /// </summary>
-        public User User { get; set; }
-
-        /// <summary>
-        /// Конструктор для инициализации данных кредита
-        /// </summary>
-        /// <param name="loanAmount"></param>
-        /// <param name="interestRate"></param>
-        /// <param name="loanTermMonths"></param>
-        /// <param name="userId">User ID</param>
-        /// <param name="user">User</param>
-        public Loan(double loanAmount, double interestRate, int loanTermMonths, int userId, User user)
-        {
-            LoanAmount = loanAmount;
-            InterestRate = interestRate;
-            LoanTermMonths = loanTermMonths;
-            UserId = userId;
-            User = user;
-        }
+        public int ClientId { get; set; }
+        public Client Client { get; set; }
 
         /// <summary>
         /// Метод для вычисления ежемесячного платежа по кредиту

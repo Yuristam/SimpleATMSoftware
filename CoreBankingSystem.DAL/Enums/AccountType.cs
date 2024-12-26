@@ -6,8 +6,5 @@
         SavingsAccount = 2,
         DepositAccount = 3,
         CreditAccount = 4,
-        MobileAccount = 5,
-        CardAccount = 6,
-        CorrespondentAccount = 7
     }
 }

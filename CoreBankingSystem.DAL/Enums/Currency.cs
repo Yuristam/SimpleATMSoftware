@@ -2,7 +2,7 @@
 
 namespace CoreBankingSystem.DAL.Enums
 {
-    public enum CurrencyType
+    public enum Currency
     {
         [Display(Name = "Kyrgyz Som")]
         KGS = 1,
