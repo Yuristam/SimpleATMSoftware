@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace CoreBankingSystem.DAL.Enums
+namespace CoreBankingSystem.BLL.Enums
 {
     public enum Currency
     {

@@ -1,4 +1,4 @@
-﻿namespace CoreBankingSystem.DAL.Enums
+﻿namespace CoreBankingSystem.BLL.Enums
 {
     public enum TransactionType
     {

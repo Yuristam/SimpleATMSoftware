@@ -1,4 +1,4 @@
-﻿namespace CoreBankingSystem.DAL.Models
+﻿namespace CoreBankingSystem.BLL.Models
 {
     public class Client
     {

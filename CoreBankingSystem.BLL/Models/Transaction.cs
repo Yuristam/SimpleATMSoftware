@@ -1,6 +1,6 @@
-﻿using CoreBankingSystem.DAL.Enums;
+﻿using CoreBankingSystem.BLL.Enums;
 
-namespace CoreBankingSystem.DAL.Models
+namespace CoreBankingSystem.BLL.Models
 {
     public class Transaction
     {
