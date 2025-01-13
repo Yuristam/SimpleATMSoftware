@@ -1,10 +1,12 @@
-﻿namespace CoreBankingSystem.CMD.Menu
+﻿using CoreBankingSystem.BLL.Models;
+
+namespace CoreBankingSystem.CMD.Menu
 {
     public static class MainMenu
     {
-        public static void PrintMainMenu()
+        public static void PrintMainMenu(User user)
         {
-            MenuHelper.GreetingUser();
+            MenuHelper.GreetingUser(user.FullName);
             Console.WriteLine("");
         }
     }

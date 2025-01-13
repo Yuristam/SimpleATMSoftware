@@ -7,4 +7,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CoreBankingSystem.BLL\CoreBankingSystem.BLL.csproj" />
+    <ProjectReference Include="..\CoreBankingSystem.DAL\CoreBankingSystem.DAL.csproj" />
+    <ProjectReference Include="..\SimpleATMSoftware\SimpleATMSoftware.csproj" />
+  </ItemGroup>
+
 </Project>

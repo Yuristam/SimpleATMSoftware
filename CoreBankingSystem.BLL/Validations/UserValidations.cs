@@ -4,14 +4,37 @@ namespace CoreBankingSystem.BLL.Validations
 {
     public class UserValidations
     {
-        public static string EnterUserPassword()
+        public static string InputUserLogin(string login)
+        {
+            while (true)
+            {
+                Console.Clear();
+                Console.Write("Please enter your Login: \n> ");
+
+                login = Console.ReadLine();
+
+                if (string.IsNullOrWhiteSpace(login))
+                    InputExceptions.PrintNullOrWhiteSpaceExceptionMessage(login);
+
+                else if (login.Length != 8)
+                    InputExceptions.PrintLengthExceptionMessage(login, 8, 8);
+
+                else if (login.All(char.IsDigit))
+                      return login;
+
+                else
+                    InputExceptions.PrintNotValidInputExceptionMessage(login, true);
+            }
+        }
+
+        public static string InputUserPassword(string password)
         {
             while (true)
             {
                 Console.Clear();
                 Console.Write("Please enter your Password: \n> ");
 
-                string password = Console.ReadLine();
+                password = Console.ReadLine();
 
                 if (string.IsNullOrWhiteSpace(password))
                     InputExceptions.PrintNullOrWhiteSpaceExceptionMessage(password);
