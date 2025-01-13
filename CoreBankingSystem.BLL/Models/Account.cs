@@ -13,7 +13,7 @@ namespace CoreBankingSystem.BLL.Models
         public byte TransactionsLimitPerDay { get; set; }
         public bool IsAccountBlocked { get; set; }
 
-        public int ClientId { get; set; }
+        public Guid ClientId { get; set; }
         public Client Client { get; set; }
     }
 }

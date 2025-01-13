@@ -6,6 +6,7 @@
         public double LoanAmount { get; set; } 
         public double InterestRate { get; set; } 
         public int LoanTermMonths { get; set; }
+
         public Guid ClientId { get; set; }
         public Client Client { get; set; }
 

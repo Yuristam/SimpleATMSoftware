@@ -6,7 +6,7 @@ namespace CoreBankingSystem.BLL.Models
     {
         public int Id { get; set; }
         public DateTime TransactionDate { get; set; }
-        public decimal Sum { get; set; }
+        public decimal Amount { get; set; }
         public TransactionType TransactionType { get; set; }
         public int SenderAccount { get; set; }
         public int ReceiverAccount { get; set; }

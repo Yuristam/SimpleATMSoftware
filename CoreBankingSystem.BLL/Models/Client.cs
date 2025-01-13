@@ -2,10 +2,10 @@
 {
     public class Client
     {
-        public Guid Id { get; set; }
-        public string Name { get; set; } = string.Empty;
+        public Guid ClientId { get; set; }
+        public string Name { get; set; }
         public int Login { get; set; }
-        public string Password { get; set; } = string.Empty;
+        public string Password { get; set; }
 
         public ICollection<Account> Accounts { get; set; } = new List<Account>();
         public ICollection<Deposit> Deposits { get; set; } = new List<Deposit>();

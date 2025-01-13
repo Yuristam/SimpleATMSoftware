@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreBankingSystem.DAL", "Co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreBankingSystem.BLL", "CoreBankingSystem.BLL\CoreBankingSystem.BLL.csproj", "{D3D8FF20-D117-4DAA-9B44-2BA345334402}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreBankingSystem.CMD", "CoreBankingSystem.CMD\CoreBankingSystem.CMD.csproj", "{0E7127A4-AB67-46EF-ABFA-BDF82A3D3C09}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{D3D8FF20-D117-4DAA-9B44-2BA345334402}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3D8FF20-D117-4DAA-9B44-2BA345334402}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3D8FF20-D117-4DAA-9B44-2BA345334402}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E7127A4-AB67-46EF-ABFA-BDF82A3D3C09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E7127A4-AB67-46EF-ABFA-BDF82A3D3C09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E7127A4-AB67-46EF-ABFA-BDF82A3D3C09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E7127A4-AB67-46EF-ABFA-BDF82A3D3C09}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

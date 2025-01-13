@@ -4,6 +4,7 @@
     {
         Deposit = 1,
         Withdrawal = 2,
-        Transfer = 3
+        Transfer = 3,
+        Cashback = 4
     }
 }
