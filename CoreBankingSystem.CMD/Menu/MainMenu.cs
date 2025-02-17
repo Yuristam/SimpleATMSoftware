@@ -1,11 +1,8 @@
-﻿using CoreBankingSystem.BLL.Models;
-using CoreBankingSystem.BLL.Validations;
-
-namespace CoreBankingSystem.CMD.Menu
+﻿namespace CoreBankingSystem.CMD.Menu
 {
     public static class MainMenu
     {
-        public static void EnterSystem()
+        /*public static void EnterSystem()
         {
             // TODO: dependency injection
             User user = new User(1, "My Name", "12345678", "P@ssword1", "P@ssword1");
@@ -25,16 +22,16 @@ namespace CoreBankingSystem.CMD.Menu
                     PrintMainMenu(user);
                 }
             }
-        }
+        }*/
 
-        public static void PrintMainMenu(User user)
+        public static void PrintMainMenu()
         {
             string userInput;
 
             while (true)
             {
                 Console.Clear();
-                MenuHelper.GreetingUser(user.FullName);
+                MenuHelper.GreetingUser();
                 Console.WriteLine(
                     "1. Find User \n" +
                     "2. Create User \n" +
