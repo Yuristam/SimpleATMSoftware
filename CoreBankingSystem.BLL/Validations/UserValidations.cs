@@ -4,54 +4,56 @@ namespace CoreBankingSystem.BLL.Validations
 {
     public class UserValidations
     {
-        public static string InputUserLogin(string login)
+        private static string _userInput;
+
+        public static string InputUserLogin()
         {
             while (true)
             {
                 Console.Clear();
                 Console.Write("Please enter your Login: \n> ");
 
-                login = Console.ReadLine();
+                _userInput = Console.ReadLine();
 
-                if (string.IsNullOrWhiteSpace(login))
-                    InputExceptions.PrintNullOrWhiteSpaceExceptionMessage(login);
+                if (string.IsNullOrWhiteSpace(_userInput))
+                    InputExceptions.PrintNullOrWhiteSpaceExceptionMessage("login");
 
-                else if (login.Length != 8)
-                    InputExceptions.PrintLengthExceptionMessage(login, 8, 8);
+                else if (_userInput.Length != 8)
+                    InputExceptions.PrintLengthExceptionMessage("login", 8, 8);
 
-                else if (login.All(char.IsDigit))
-                      return login;
+                else if (_userInput.All(char.IsDigit))
+                      return _userInput;
 
                 else
-                    InputExceptions.PrintNotValidInputExceptionMessage(login, true);
+                    InputExceptions.PrintNotValidInputExceptionMessage("login", true);
             }
         }
 
-        public static string InputUserPassword(string password)
+        public static string InputUserPassword()
         {
             while (true)
             {
                 Console.Clear();
                 Console.Write("Please enter your Password: \n> ");
 
-                password = Console.ReadLine();
+                _userInput = Console.ReadLine();
 
-                if (string.IsNullOrWhiteSpace(password))
-                    InputExceptions.PrintNullOrWhiteSpaceExceptionMessage(password);
+                if (string.IsNullOrWhiteSpace(_userInput))
+                    InputExceptions.PrintNullOrWhiteSpaceExceptionMessage("password");
 
-                else if (password.Length < 8 || password.Length > 30)
-                    InputExceptions.PrintLengthExceptionMessage(password, 8, 30);
+                else if (_userInput.Length < 8 || _userInput.Length > 30)
+                    InputExceptions.PrintLengthExceptionMessage("password", 8, 30);
 
-                else if (password.Any(char.IsLetter)
-                      && password.Any(char.IsDigit)
-                      && password.Any(char.IsLower)
-                      && password.Any(char.IsUpper)
-                      && password.Any(char.IsSymbol)
-                       | password.Any(char.IsPunctuation))
-                    return password;
+                else if (_userInput.Any(char.IsLetter)
+                      && _userInput.Any(char.IsDigit)
+                      && _userInput.Any(char.IsLower)
+                      && _userInput.Any(char.IsUpper)
+                      && _userInput.Any(char.IsSymbol)
+                       | _userInput.Any(char.IsPunctuation))
+                    return _userInput;
 
                 else
-                    InputExceptions.PrintNotValidInputExceptionMessage(password, true, true, true, true);
+                    InputExceptions.PrintNotValidInputExceptionMessage("password", true, true, true, true);
             }
         }
     }
