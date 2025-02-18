@@ -6,7 +6,7 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        var config = new ConfigurationBuilder()
+        /*var config = new ConfigurationBuilder()
             .SetBasePath(Directory.GetCurrentDirectory())
             .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
             .Build();
@@ -35,7 +35,7 @@ internal class Program
             {
                 Console.WriteLine($"❌ Error: {ex.Message}");
             }
-        }
-        //MainMenu.PrintMainMenu();
+        }*/
+        MainMenu.PrintMainMenu();
     }
 }
