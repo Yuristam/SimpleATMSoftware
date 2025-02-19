@@ -2,28 +2,6 @@
 {
     public static class MainMenu
     {
-        /*public static void EnterSystem()
-        {
-            // TODO: dependency injection
-            User user = new User(1, "My Name", "12345678", "P@ssword1", "P@ssword1");
-
-            while (true)
-            {
-                string currentUserLogin = UserValidations.InputUserLogin();
-                string currentUserPassword = UserValidations.InputUserPassword();
-
-                if (user.Login != currentUserLogin && user.Password != currentUserPassword)
-                {
-                    Console.WriteLine("You entered wrong login or wrong password.");
-                    Task.Delay(1500).Wait();
-                }
-                else
-                {
-                    PrintMainMenu(user);
-                }
-            }
-        }*/
-
         public static void PrintMainMenu()
         {
             string userInput;

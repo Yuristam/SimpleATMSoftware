@@ -1,5 +1,6 @@
-﻿using CoreBankingSystem.BLL.Exceptions;
-using CoreBankingSystem.BLL.Models;
+﻿using CoreBankingSystem.CMD.Exceptions;
+using Microsoft.Data.SqlClient;
+using System.Data;
 
 namespace CoreBankingSystem.CMD.Menu
 {
@@ -9,13 +10,45 @@ namespace CoreBankingSystem.CMD.Menu
 
         public static void CreateUser()
         {
-            int id = 0;
-            string fullName = EnterUserFullName();
+            var connectionString = "my connection string";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string fullName = EnterUserFullName();
+
+                connection.Open();
+
+                string insertQuery = "INSERT INTO Users (FullName, Login, Password, ConfirmPassword) VALUES (@name, @name, @name, @name)";
+                using (SqlCommand cmd = new SqlCommand(insertQuery, connection))
+                {
+                    cmd.Parameters.AddWithValue("@name", fullName);
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    Console.WriteLine($"Added values: {rowsAffected}");
+                }
+                Console.ReadKey();
+            }
+
+            /*int id = 0;
             string login = EnterUserLogin();
             string password = EnterUserPassword();
             string confirmPassword = EnterUserPassword();
 
-            User user = new User(id++, fullName, login, password, confirmPassword);            
+            User user = new User(id++, fullName, login, password, confirmPassword); */           
+        }
+
+        public static void GetUser()
+        {
+            var connection = "my connection string";
+
+            DataTable table = new DataTable();
+            using(SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM Users", connection))
+            {
+                adapter.Fill(table);
+            }
+            foreach (DataRow row in table.Rows)
+            {
+                Console.WriteLine($"ID: {row["Id"]}, Name: {row["FullName"]}");
+            }
+            Console.ReadKey();
         }
 
         public static string EnterUserFullName()

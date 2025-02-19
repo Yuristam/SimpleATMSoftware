@@ -5,8 +5,6 @@ VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleATMSoftware", "SimpleATMSoftware\SimpleATMSoftware.csproj", "{D32BCA5E-323C-4CE9-B681-5182FC61B66C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleATMSoftware.Admin", "SimpleATMSoftware.Admin\SimpleATMSoftware.Admin.csproj", "{73A57E14-1E2A-4658-8B0F-514A47E94EFB}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreBankingSystem.DAL", "CoreBankingSystem.DAL\CoreBankingSystem.DAL.csproj", "{B0D17F50-CC8C-4B78-A358-DF79D642A9A1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreBankingSystem.BLL", "CoreBankingSystem.BLL\CoreBankingSystem.BLL.csproj", "{D3D8FF20-D117-4DAA-9B44-2BA345334402}"
@@ -23,10 +21,6 @@ Global
 		{D32BCA5E-323C-4CE9-B681-5182FC61B66C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D32BCA5E-323C-4CE9-B681-5182FC61B66C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D32BCA5E-323C-4CE9-B681-5182FC61B66C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{73A57E14-1E2A-4658-8B0F-514A47E94EFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{73A57E14-1E2A-4658-8B0F-514A47E94EFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{73A57E14-1E2A-4658-8B0F-514A47E94EFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{73A57E14-1E2A-4658-8B0F-514A47E94EFB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B0D17F50-CC8C-4B78-A358-DF79D642A9A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B0D17F50-CC8C-4B78-A358-DF79D642A9A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B0D17F50-CC8C-4B78-A358-DF79D642A9A1}.Release|Any CPU.ActiveCfg = Release|Any CPU

@@ -1,16 +1,14 @@
-﻿using CoreBankingSystem.BLL.Models;
+﻿using CoreBankingSystem.DAL.Models;
 
 namespace CoreBankingSystem.DAL.Interfaces
 {
     public interface IAccountRepository
     {
-        Task<Account> GetAccountByAccountNumberAsync(long accountNumber);
-        Task<ICollection<Account>> GetAccountsAsync();
+        Task<Account?> GetAccountByIdAsync(int id);
+        Task<ICollection<Account>> GetAllAccountsAsync();
 
-        Task<Account> CreateAccountForClientAsync(Account account);
-        decimal DepositToAccount(decimal money);
-        decimal WithdrawFromAccount(decimal money);
-        void CloseClientAccount(long accountNumber);
-        void GetBalanceWithTransactions(long accountNumber);
+        Task CreateAccountAsync(Account account);
+        Task UpdateAccountAsync(Account account);
+        Task DeleteAccountAsync(int id);
     }
 }

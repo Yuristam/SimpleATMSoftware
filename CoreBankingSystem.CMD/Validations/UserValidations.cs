@@ -1,6 +1,6 @@
-﻿using CoreBankingSystem.BLL.Exceptions;
+﻿using CoreBankingSystem.CMD.Exceptions;
 
-namespace CoreBankingSystem.BLL.Validations
+namespace CoreBankingSystem.CMD.Validations
 {
     public class UserValidations
     {
@@ -22,7 +22,7 @@ namespace CoreBankingSystem.BLL.Validations
                     InputExceptions.PrintLengthExceptionMessage("login", 8, 8);
 
                 else if (_userInput.All(char.IsDigit))
-                      return _userInput;
+                    return _userInput;
 
                 else
                     InputExceptions.PrintNotValidInputExceptionMessage("login", true);

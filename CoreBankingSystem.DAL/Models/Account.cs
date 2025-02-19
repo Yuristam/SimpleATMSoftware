@@ -1,9 +1,10 @@
-﻿using CoreBankingSystem.BLL.Enums;
+﻿using CoreBankingSystem.DAL.Enums;
 
-namespace CoreBankingSystem.BLL.Models
+namespace CoreBankingSystem.DAL.Models
 {
     public class Account
     {
+        public int Id { get; set; }
         public long AccountNumber { get; set; }
         public AccountType AccountType { get; set; }
         public decimal Balance { get; set; }

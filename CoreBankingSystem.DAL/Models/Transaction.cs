@@ -1,6 +1,6 @@
-﻿using CoreBankingSystem.BLL.Enums;
+﻿using CoreBankingSystem.DAL.Enums;
 
-namespace CoreBankingSystem.BLL.Models
+namespace CoreBankingSystem.DAL.Models
 {
     public class Transaction
     {
@@ -11,7 +11,7 @@ namespace CoreBankingSystem.BLL.Models
         public int SenderAccount { get; set; }
         public int ReceiverAccount { get; set; }
 
-        public long AccountNumber { get; set; }
+        public int AccountId { get; set; }
         public Account Account { get; set; }
     }
 }

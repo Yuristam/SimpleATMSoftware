@@ -9,12 +9,12 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.1" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\CoreBankingSystem.BLL\CoreBankingSystem.BLL.csproj" />
-    <ProjectReference Include="..\CoreBankingSystem.DAL\CoreBankingSystem.DAL.csproj" />
-    <ProjectReference Include="..\SimpleATMSoftware\SimpleATMSoftware.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,6 +1,6 @@
-﻿namespace CoreBankingSystem.BLL.Enums
+﻿namespace CoreBankingSystem.DAL.Enums
 {
-    public enum TransactionType
+    public enum TransactionType : byte
     {
         Deposit = 1,
         Withdrawal = 2,

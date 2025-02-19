@@ -1,13 +1,13 @@
-﻿namespace CoreBankingSystem.BLL.Models
+﻿namespace CoreBankingSystem.DAL.Models
 {
     public class Loan
     {
         public int Id { get; set; }
-        public double LoanAmount { get; set; } 
-        public double InterestRate { get; set; } 
+        public double Amount { get; set; }
+        public double InterestRate { get; set; }
         public int LoanTermMonths { get; set; }
 
-        public Guid ClientId { get; set; }
+        public int ClientId { get; set; }
         public Client Client { get; set; }
 
         /// <summary>
@@ -17,7 +17,7 @@
         public double CalculateMonthlyPayment()
         {
             double monthlyInterestRate = InterestRate / 100 / 12;
-            double monthlyPayment = LoanAmount * monthlyInterestRate /
+            double monthlyPayment = Amount * monthlyInterestRate /
                 (1 - Math.Pow(1 + monthlyInterestRate, -LoanTermMonths));
 
             return monthlyPayment;
@@ -37,7 +37,7 @@
         /// </summary>
         public void DisplayLoanDetails()
         {
-            Console.WriteLine($"Loan Amount: {LoanAmount:C}");
+            Console.WriteLine($"Loan Amount: {Amount:C}");
             Console.WriteLine($"Interest Rate: {InterestRate}%");
             Console.WriteLine($"Loan Term: {LoanTermMonths} months");
             Console.WriteLine($"Monthly Payment: {CalculateMonthlyPayment():C}");

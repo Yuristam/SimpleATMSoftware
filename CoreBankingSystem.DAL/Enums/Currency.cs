@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace CoreBankingSystem.BLL.Enums
+namespace CoreBankingSystem.DAL.Enums
 {
-    public enum Currency
+    public enum Currency : byte
     {
         [Display(Name = "Kyrgyz Som")]
         KGS = 1,

@@ -1,4 +1,4 @@
-﻿namespace CoreBankingSystem.BLL.Exceptions
+﻿namespace CoreBankingSystem.CMD.Exceptions
 {
     public class InputExceptions : Exception
     {
@@ -10,7 +10,7 @@
                 $"You should provide proper {propertyType}");
             Console.ResetColor();
 
-            Task.Delay(1500).Wait();        
+            Task.Delay(1500).Wait();
         }
 
         public static void PrintLengthExceptionMessage(string propertyType, int minimumLength, int maximumLength)
@@ -36,7 +36,7 @@
             if (isUppercase) message += " at least one uppercase letter,";
             if (isLowercase) message += " at least one lower case letter,";
             if (isSpecialCharacter) message += " at least one special symbol,";
-            
+
             Console.WriteLine(message);
             Console.ResetColor();
 
