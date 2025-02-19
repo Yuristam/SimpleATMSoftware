@@ -19,7 +19,7 @@ namespace CoreBankingSystem.DAL.Repositories
             using var connection = new SqlConnection(_connectionString);
             await connection.OpenAsync();
 
-            using var command = new SqlCommand("INSERT INTO Clients", connection);
+            using var command = new SqlCommand("INSERT INTO Clients () VALUES ()", connection);
         }
 
         public Task DeleteClientAsync(int id)

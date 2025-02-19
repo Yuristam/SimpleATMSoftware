@@ -7,6 +7,7 @@
         {
         }
 
+        public byte Age { get; set; }
         public int PhoneNumber { get; set; }
 
         public int AddressId { get; set; }
