@@ -1,4 +1,4 @@
-﻿using CoreBankingSystem.BLL.Models;
+﻿using CoreBankingSystem.DAL.Models;
 
 namespace CoreBankingSystem.BLL.Services
 {

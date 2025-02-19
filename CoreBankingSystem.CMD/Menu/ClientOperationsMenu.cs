@@ -1,8 +1,8 @@
 ﻿namespace CoreBankingSystem.CMD.Menu
 {
-    public partial class CreateUserMenu
+    public partial class ClientOperationsMenu
     {
-        public static void PrintCreateUserMenu()
+        public static void PrintClientOperationsMenu()
         {
             string userInput;
 

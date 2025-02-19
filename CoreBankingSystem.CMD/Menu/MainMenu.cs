@@ -24,7 +24,7 @@
                 switch (userInput)
                 {
                     case "1": FindUserMenu.PrintFindUserMenu(); break;
-                    case "2": CreateUserMenu.PrintCreateUserMenu(); break;
+                    case "2": ClientOperationsMenu.PrintClientOperationsMenu(); break;
                     case "3": OpenBankOperationsMenu.PrintOpenBankOperationsMenu(); break;
                     case "4": OpenAccountsMenu.PrintOpenAccountsMenu(); break;
                     case "5": OpenLoansMenu.PrintOpenLoansMenu(); break;
