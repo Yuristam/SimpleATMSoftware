@@ -3,9 +3,10 @@
     public class Deposit
     {
         public int Id { get; set; }
-        public double Amount { get; set; }
-        public double InterestRate { get; set; }
-        public int DepositTermMonths { get; set; }
+        public string DepositType { get; set; }
+        public decimal Amount { get; set; }
+        public decimal InterestRate { get; set; }
+        public byte DepositTermMonths { get; set; }
 
         public int ClientId { get; set; }
         public Client Client { get; set; }
@@ -14,9 +15,17 @@
         /// Метод для вычисления суммы по окончании срока депозита с начисленными процентами
         /// </summary>
         /// <returns>Общую сумму</returns>
-        public double CalculateTotalAmount()
+        public decimal CalculateTotalAmount()
         {
-            double totalAmount = Amount * Math.Pow(1 + InterestRate / 100 / 12, DepositTermMonths);
+            if (DepositTermMonths <= 0)
+                throw new ArgumentException("Deposit term must be greater than zero.");
+
+            if (InterestRate == 0)
+                return Amount; // Без процентов просто возвращаем изначальную сумму
+
+            decimal monthlyInterestRate = InterestRate / 100 / 12;
+            decimal totalAmount = Amount * (decimal)Math.Pow((double)(1 + monthlyInterestRate), DepositTermMonths);
+
             return totalAmount;
         }
 

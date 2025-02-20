@@ -8,10 +8,10 @@
         }
 
         public byte Age { get; set; }
-        public int PhoneNumber { get; set; }
+        public long PhoneNumber { get; set; }
 
-        public int AddressId { get; set; }
-        public Address Address { get; set; }
+        //public int AddressId { get; set; }
+        //public Address Address { get; set; }
 
         public ICollection<Account> Accounts { get; set; } = new List<Account>();
         public ICollection<Deposit> Deposits { get; set; } = new List<Deposit>();

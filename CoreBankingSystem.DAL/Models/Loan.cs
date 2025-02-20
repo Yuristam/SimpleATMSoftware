@@ -3,9 +3,10 @@
     public class Loan
     {
         public int Id { get; set; }
-        public double Amount { get; set; }
-        public double InterestRate { get; set; }
-        public int LoanTermMonths { get; set; }
+        public string LoanType { get; set; }
+        public decimal Amount { get; set; }
+        public decimal InterestRate { get; set; }
+        public byte LoanTermMonths { get; set; }
 
         public int ClientId { get; set; }
         public Client Client { get; set; }
@@ -14,20 +15,28 @@
         /// Метод для вычисления ежемесячного платежа по кредиту
         /// </summary>
         /// <returns>Ежемесячная выплата</returns>
-        public double CalculateMonthlyPayment()
+        public decimal CalculateMonthlyPayment()
         {
-            double monthlyInterestRate = InterestRate / 100 / 12;
-            double monthlyPayment = Amount * monthlyInterestRate /
-                (1 - Math.Pow(1 + monthlyInterestRate, -LoanTermMonths));
+            if (LoanTermMonths <= 0)
+                throw new ArgumentException("Loan term must be greater than zero.");
 
-            return monthlyPayment;
+            if (InterestRate == 0)
+                return Amount / LoanTermMonths; // Без процентов — простой дележ
+
+            decimal monthlyInterestRate = InterestRate / 100 / 12;
+            decimal denominator = 1 - (decimal)Math.Pow((double)(1 + monthlyInterestRate), -LoanTermMonths);
+
+            if (denominator == 0)
+                throw new DivideByZeroException("Invalid calculation. Check input values.");
+
+            return Amount * monthlyInterestRate / denominator;
         }
 
         /// <summary>
         /// Метод для вычисления общей суммы выплат по кредиту
         /// </summary>
         /// <returns>Общая сумма выплаты</returns>
-        public double CalculateTotalRepayment()
+        public decimal CalculateTotalRepayment()
         {
             return CalculateMonthlyPayment() * LoanTermMonths;
         }

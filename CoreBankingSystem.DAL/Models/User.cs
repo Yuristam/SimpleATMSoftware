@@ -17,7 +17,6 @@
         public string LastName { get; set; }
 
         public string FullName { get => $"{FirstName} {LastName}"; }
-        public string ShortName { get => $"{FirstName} {LastName.Substring(0, 1)}."; }
         
         public string Login { get; set; }
         public string Password { get; set; }
