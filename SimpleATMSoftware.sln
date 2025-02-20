@@ -11,14 +11,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreBankingSystem.BLL", "Co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreBankingSystem.CMD", "CoreBankingSystem.CMD\CoreBankingSystem.CMD.csproj", "{0E7127A4-AB67-46EF-ABFA-BDF82A3D3C09}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL", "SQL", "{1A4D1BA4-7798-4B01-BC42-C67E3BAA0A0D}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tables", "Tables", "{1609F373-4765-4D0E-ADA3-21A8D0D156F3}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9CA6BE04-E985-4078-979A-48923A35372F}"
 	ProjectSection(SolutionItems) = preProject
-		CreateTables.sql = CreateTables.sql
-		DropTables.sql = DropTables.sql
-		GetAccounts.sql = GetAccounts.sql
-		InsertData.sql = InsertData.sql
+		SQL\Tables\CreateTables.sql = SQL\Tables\CreateTables.sql
+		SQL\Tables\DropTables.sql = SQL\Tables\DropTables.sql
+		SQL\Tables\GetAccounts.sql = SQL\Tables\GetAccounts.sql
+		SQL\Tables\InsertData.sql = SQL\Tables\InsertData.sql
 	EndProjectSection
 EndProject
 Global
@@ -46,9 +44,6 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{1609F373-4765-4D0E-ADA3-21A8D0D156F3} = {1A4D1BA4-7798-4B01-BC42-C67E3BAA0A0D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0ECD39CF-1087-476E-BD41-7C162CE1EE8A}
